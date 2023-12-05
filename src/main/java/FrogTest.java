@@ -80,6 +80,26 @@ class FrogTest {
 
     @org.junit.jupiter.api.Test
     void kill() {
-        // Ajoute des tests pour la méthode kill si nécessaire
+            Frog frog = new Frog("TestFrog", 15, 5);
+            assertEquals (15, frog.get_mass());
+            frog.kill();
+            assertEquals(0.0, frog.get_mass());
     }
+
+
+
+
+    @org.junit.jupiter.api.Test
+    void isDeadwhenMassIsZEro (){
+        Frog deadFrog = new Frog("DeadFrog", 0, 5);
+        assertTrue(deadFrog.isDead());
+    }
+
+    @org.junit.jupiter.api.Test
+    void isNotDeadWhenMassIsGreaterThanZero() {
+        Frog aliveFrog = new Frog("AliveFrog", 3, 5);
+        assertFalse(aliveFrog.isDead());
+    }
+
 }
+

@@ -39,7 +39,7 @@ public class Frog {
                 return "the fly " + fly.name + " is eaten by " + this.name;
             }
             else {
-                return "the fly " + fly.name + " is to quick !!";
+                return "the fly " + fly.name + " is too quick !!";
             }
         }
     }
@@ -63,7 +63,7 @@ public class Frog {
     public void kill(){
         this.set_mass(0);
     }
-    public boolean isDed(){
+    public boolean isDead(){
         return this.mass == 0;
     }
 
