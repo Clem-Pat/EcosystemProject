@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e05e4030-eefa-4a51-932d-76abfc666035" name="Changes" comment="Tests sur Pond">
+    <list default="true" id="e05e4030-eefa-4a51-932d-76abfc666035" name="Changes" comment="Ajout des méthodes dans Frog pour respecter les consignes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Frog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Frog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FrogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FrogTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +80,7 @@
       <workItem from="1701785104975" duration="3382000" />
       <workItem from="1701789231733" duration="4000" />
       <workItem from="1701789248426" duration="3000" />
-      <workItem from="1701866143348" duration="3145000" />
+      <workItem from="1701866143348" duration="4587000" />
     </task>
     <task id="LOCAL-00001" summary="Add files via upload">
       <option name="closed" value="true" />
@@ -113,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701788919184</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ajout des méthodes dans Frog pour respecter les consignes">
+      <option name="closed" value="true" />
+      <created>1701869402163</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701869402163</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +133,7 @@
     <MESSAGE value="Add tests" />
     <MESSAGE value="Fin des tests sur Frog" />
     <MESSAGE value="Tests sur Pond" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests sur Pond" />
+    <MESSAGE value="Ajout des méthodes dans Frog pour respecter les consignes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout des méthodes dans Frog pour respecter les consignes" />
   </component>
 </project>

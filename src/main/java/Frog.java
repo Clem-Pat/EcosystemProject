@@ -6,6 +6,9 @@ public class Frog {
     public static final String DEFAULT_NAME = "Tea";
     public static final double DEFAULT_TONGUE_SPEED = 5;
     private boolean isFroglet;
+    private static final String SPECIES = "Rare Pepe";
+
+
 
 
     //Constructor
@@ -28,10 +31,6 @@ public class Frog {
     public void set_tongue_speed(double tongueSpeed) { this.tongueSpeed = tongueSpeed;}
     public double ageInYears() {return (int) (age/12);}
 
-    public String toString(){
-        if (this.mass == 0) {return this.name + "DEAD"; }
-        else {return this.name + ", mass : " + mass + ", tongueSpeed : " + tongueSpeed; }
-    }
 
     public String eat(Fly fly){
         if (fly.isDead()){
@@ -112,6 +111,12 @@ public class Frog {
     }
     public boolean isDead(){
         return this.mass == 0;
+    }
+    public String toString() {
+        String frogType = isFroglet ? "froglet" : "frog";
+        String outputFormat = "My name is %s and I'm a rare %s. I'm %d months old and my tongue has a speed of %.2f.";
+
+        return String.format(outputFormat, name, frogType, age, tongueSpeed);
     }
 
 }

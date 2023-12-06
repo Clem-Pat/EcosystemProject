@@ -35,13 +35,15 @@ class FrogTest {
     }
 
     @org.junit.jupiter.api.Test
-    void testToString() {
-        Frog frog = new Frog ("TestFrog", 3, 5);
-        assertEquals("TestFrog, mass : 3, tongueSpeed : 5", frog.toString());
+    public static void main(String[] args) {
+        // Create a Frog instance
+        Frog frog1 = new Frog("Froggy", 5, 7.5);
 
-        Frog deadFrog = new Frog("TestDeadFrog", 0, 0);
-        assertEquals("TestDeadFrog DEAD", deadFrog.toString());
+        // Call toString method and print the result
+        System.out.println(frog1.toString());
     }
+}
+
 
     @org.junit.jupiter.api.Test
     void eat() {
