@@ -1,17 +1,21 @@
 public class Frog {
     public String name;
     private double mass;
-    public double age = 0;
+    public double age = 0; //Age in months
     private double tongueSpeed;
     public static final String DEFAULT_NAME = "Tea";
     public static final double DEFAULT_TONGUE_SPEED = 5;
+    private boolean isFroglet;
+
 
     //Constructor
     public Frog(String name, double mass, double tongueSpeed) {
         this.name = name;
         this.mass = mass;
         this.tongueSpeed = tongueSpeed;
+
     }
+
     public Frog(double mass, double tongueSpeed) {
         this(DEFAULT_NAME, mass, tongueSpeed);
     }
@@ -22,6 +26,7 @@ public class Frog {
     public double get_tongue_speed() { return tongueSpeed; }
     public void set_mass(double mass) { this.mass = mass;}
     public void set_tongue_speed(double tongueSpeed) { this.tongueSpeed = tongueSpeed;}
+    public double ageInYears() {return (int) (age/12);}
 
     public String toString(){
         if (this.mass == 0) {return this.name + "DEAD"; }
@@ -60,6 +65,48 @@ public class Frog {
         }
 
     }
+    private boolean calculateIsFroglet() {
+        return age > 1 && age < 7;
+    }
+    public void grow (int numberOfMonths) {
+        age += numberOfMonths;
+
+        for (int i = 0; i < numberOfMonths && age <= 12; i++) {
+            tongueSpeed++;
+        }
+
+        if (age >= 30) {
+            for (int i = 0; i < numberOfMonths; i++) {
+                if (tongueSpeed > 5) {
+                    tongueSpeed--;
+                }
+            }
+        }
+
+        // Update isFroglet accordingly
+        updateIsFroglet();
+    }
+
+    public void grow() {
+        // Age the Frog by one month
+        age++;
+
+        // Update tongueSpeed accordingly
+        if (age <= 12) {
+            tongueSpeed++;
+        } else if (age >= 30 && tongueSpeed > 5) {
+            tongueSpeed--;
+        }
+
+        // Update isFroglet accordingly
+        updateIsFroglet();
+    }
+
+    // Helper method to update isFroglet based on age
+    private void updateIsFroglet() {
+        isFroglet = age <= 12;
+    }
+
     public void kill(){
         this.set_mass(0);
     }
