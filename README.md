@@ -14,7 +14,7 @@ The rules are simple :
 To deploy this project run
 
 ```bash
-  src/main/java/com/example/demo2.PondApplication.java
+  src/main/java/com/example/demo2/PondApplication.java
 ```
 
 
