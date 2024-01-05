@@ -20,7 +20,7 @@ To deploy this project run
 
 ## Screenshots
 
-![App Screenshot](https://github.com/Clem-Pat/EcosystemProject/tree/main/src/main/resources/com/example/demo2/PondScreenShot.png)
+![App Screenshot](https://github.com/Clem-Pat/EcosystemProject/tree/main/src/main/resources/com/example/demo2/PondScreenShot.png?raw=true)
 
 
 ## Authors
