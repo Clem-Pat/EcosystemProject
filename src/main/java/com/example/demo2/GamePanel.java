@@ -1,6 +1,8 @@
 package com.example.demo2;
 
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import javax.swing.*;
 
 public class GamePanel extends JPanel {
@@ -8,9 +10,17 @@ public class GamePanel extends JPanel {
     public Graphics g;
 
     // Constructor
-    public GamePanel(Image image) {
+    public GamePanel(GameFrame frame, Image image) {
         this.image = image;
         setBackground(Color.decode("#9ac23b"));
+        // When we click on panel, we set the focus back to the frame so the keyboard event listener can work
+        addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                frame.toFront();
+                frame.requestFocus();
+            }
+        });
     }
     @Override
     public void paintComponent(Graphics g) {

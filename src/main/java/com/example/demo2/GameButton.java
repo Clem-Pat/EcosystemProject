@@ -2,8 +2,6 @@ package com.example.demo2;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.net.URL;
 
 public class GameButton extends JButton {
@@ -19,8 +17,7 @@ public class GameButton extends JButton {
     private final AttackCircle attackCircle;
     public static final int DEFAULT_IMG_WIDTH = 40;
     public static final int DEFAULT_IMG_HEIGHT = 40;
-
-    public GameButton(PondObject obj, String imgName, int imgWidth, int imgHeight){
+    public GameButton(Animal obj, String imgName, int imgWidth, int imgHeight){
         this.name = obj.name;
         this.x = obj.x;
         this.y = obj.y;
@@ -31,20 +28,8 @@ public class GameButton extends JButton {
         this.attackRadius = obj.attackRadius;
         this.panel = obj.pond.panel;
         setText(name);
-        addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
-                System.out.println(obj);
-            }
-        });
-        URL imageURL = PondApplication.class.getResource("/com/example/demo2/" + imgName + ".png");
-        if (imageURL != null) {
-            // Création de l'icône à partir de l'URL
-            ImageIcon icon = new ImageIcon(((new ImageIcon(imageURL)).getImage()).getScaledInstance(imgWidth, imgHeight, java.awt.Image.SCALE_SMOOTH));
-            setIcon(icon);
-        } else {
-            System.err.println("Image introuvable !");
-        }
-
+        addActionListener(e -> System.out.println(obj));
+        changeImage(imgName);
         setOpaque(false);
         setContentAreaFilled(false);
         setBorderPainted(false);
@@ -52,11 +37,11 @@ public class GameButton extends JButton {
         setBounds(x, y, width, height);
         setHorizontalTextPosition(JLabel.CENTER);
         setVerticalTextPosition(JLabel.BOTTOM);
-        attackCircle = new AttackCircle(x, y, attackRadius);
+        attackCircle = new AttackCircle(obj);
         panel.add(this);
         panel.revalidate();
     }
-    public GameButton(PondObject obj, String imgName) {
+    public GameButton(Animal obj, String imgName) {
         this(obj, imgName, DEFAULT_IMG_WIDTH, DEFAULT_IMG_HEIGHT);
     }
     protected void paintComponent(Graphics g) {
@@ -66,7 +51,7 @@ public class GameButton extends JButton {
     public void changeImage(String imgName){
         URL imageURL = PondApplication.class.getResource("/com/example/demo2/" + imgName + ".png");
         if (imageURL != null) {
-            // Création de l'icône à partir de l'URL
+            // Create icon with URL
             ImageIcon icon = new ImageIcon(((new ImageIcon(imageURL)).getImage()).getScaledInstance(imgWidth, imgHeight, java.awt.Image.SCALE_SMOOTH));
             setIcon(icon);
         } else {
@@ -83,10 +68,11 @@ public class GameButton extends JButton {
         public int x;
         public int y;
         public int attackRadius;
-        public AttackCircle(int x, int y, int attackRadius){
-            this.attackRadius = attackRadius;
-            this.x = (int) (x - 0.5*(this.attackRadius - width));
-            this.y = (int) (y - 0.5*(this.attackRadius - width));
+        public AttackCircle(Animal obj){
+            this.attackRadius = obj.attackRadius;
+            this.x = (int) (obj.x - 0.5*(this.attackRadius - width));
+            this.y = (int) (obj.y - 0.5*(this.attackRadius - width));
+            addActionListener(e -> System.out.println(obj));
             setOpaque(false);
             setContentAreaFilled(false);
             setBorderPainted(false);
@@ -96,7 +82,7 @@ public class GameButton extends JButton {
             panel.revalidate();
         }
         protected void paintComponent(Graphics g) {
-            g.setColor(Color.RED);
+            if (attackRadius - width > 0) {g.setColor(Color.RED);}
             g.drawOval(0, 0, getSize().width - 1, getSize().height - 1);
             super.paintComponent(g);
         }

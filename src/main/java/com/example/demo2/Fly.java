@@ -2,24 +2,19 @@ package com.example.demo2;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Fly extends PondObject{
-    public static final int DEFAULT_MASS = 5;
-    public static final int DEFAULT_SPEED = 2;
+public class Fly extends Animal{
 
     //Constructor
-    public Fly(PondApplication pond, String name, int x, int y, double mass, double speed) {
+    public Fly(PondApplication pond, String name, int x, int y) {
         this.type = "fly";
         this.pond = pond;
         this.name = name;
-        this.mass = mass;
-        this.speed = speed;
+        this.mass = 5;
+        this.speed = 2;
         this.x = x;
         this.y = y;
         this.radius = 70;
         this.attackRadius = this.radius;
-    }
-    public Fly(PondApplication pond, String name, int x, int y) {
-        this(pond, name, x, y, DEFAULT_MASS, DEFAULT_SPEED);
     }
     public void move(String order){
         this.mass = this.mass - 0.05;

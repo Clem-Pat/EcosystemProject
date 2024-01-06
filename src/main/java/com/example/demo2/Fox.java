@@ -1,6 +1,6 @@
 package com.example.demo2;
 
-public class Fox extends PondObject{
+public class Fox extends Animal{
 
     public Fox(PondApplication pond, String name, int x, int y) {
         this.type = "fox";
@@ -39,7 +39,7 @@ public class Fox extends PondObject{
         }
         return "false";
     }
-    public String findDirectionOfNearestObject(PondObject nearestObject){
+    public String findDirectionOfNearestObject(Animal nearestObject){
         String result = "";
         result = result + String.format("%.2f", Math.sqrt(Math.pow(this.x - nearestObject.x, 2) + Math.pow(this.y - nearestObject.y, 2))) + " pixels dans la direction : ";
         if      (nearestObject.y - this.y < - attackRadius) {result = result + "N";}
