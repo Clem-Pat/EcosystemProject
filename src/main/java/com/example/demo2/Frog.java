@@ -18,6 +18,15 @@ public class Frog extends Animal{
         this.attackRadius = this.radius + 40;
         this.speed = 2;
     }
+    public int getX() {
+        return this.x;
+    }
+    public int getY () {
+        return this.y;
+    }
+    public double getMass (){
+        return this.mass;
+    }
     public void move() {
         this.mass = this.mass - 0.1;  // if it can't eat, it starves
         if (!(pond.listFlies.isEmpty())){
