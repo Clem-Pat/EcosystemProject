@@ -1,15 +1,11 @@
 package com.example.demo2;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.swing.*;
 
 public class GamePanel extends JPanel {
-    private Image image;
+    private final Image image;
     public Graphics g;
-    List<Circle> circles = new ArrayList<>();
 
     // Constructor
     public GamePanel(Image image) {
@@ -28,35 +24,6 @@ public class GamePanel extends JPanel {
         }
         else{
             g.drawOval(0, 0,  this.getParent().getWidth()/2, this.getParent().getHeight()/2);
-        }
-//        for (Circle circle : circles) {
-//            circle.draw(g);
-//        }
-    }
-    public void addCircle(Circle circle) {
-        circles.add(circle);
-        revalidate();
-        repaint();
-    }
-
-    public void moveCircle(Circle circle, int x, int y){
-        Circle newCircle = new Circle(x, y, circle.radius);
-        circles.remove(circle);
-        removeAll();
-        revalidate();
-        repaint();
-        addCircle(newCircle);
-    }
-
-    static class Circle {
-        int x, y, radius;
-        public Circle(int x, int y, int radius) {
-            this.x = x;
-            this.y = y;
-            this.radius = radius;
-        }
-        public void draw(Graphics g) {
-            g.drawOval(x-radius/2, y-radius/2, 2*radius, 2*radius);
         }
     }
 }

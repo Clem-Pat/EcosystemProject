@@ -4,13 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.geom.Ellipse2D;
 import java.net.URL;
 
 public class GameButton extends JButton {
-
-    private final PondObject obj;
-    private final GamePanel.Circle attackCircle;
     public final GamePanel panel;
     public String name;
     public int x;
@@ -20,18 +16,16 @@ public class GameButton extends JButton {
     public int imgWidth;
     public int imgHeight;
     public int attackRadius;
-    public static final int DEFAULT_WIDTH = 70;
-    public static final int DEFAULT_HEIGHT = 70;
+    private final AttackCircle attackCircle;
     public static final int DEFAULT_IMG_WIDTH = 40;
     public static final int DEFAULT_IMG_HEIGHT = 40;
 
-    public GameButton(PondObject obj, String imgName, int width, int height, int imgWidth, int imgHeight){
-        this.obj = obj;
+    public GameButton(PondObject obj, String imgName, int imgWidth, int imgHeight){
         this.name = obj.name;
         this.x = obj.x;
         this.y = obj.y;
-        this.width = width;
-        this.height = height;
+        this.width = obj.radius;
+        this.height = obj.radius;
         this.imgWidth = imgWidth;
         this.imgHeight = imgHeight;
         this.attackRadius = obj.attackRadius;
@@ -58,16 +52,12 @@ public class GameButton extends JButton {
         setBounds(x, y, width, height);
         setHorizontalTextPosition(JLabel.CENTER);
         setVerticalTextPosition(JLabel.BOTTOM);
-        attackCircle = new GamePanel.Circle(x, y, attackRadius);
-        panel.addCircle(attackCircle);
+        attackCircle = new AttackCircle(x, y, attackRadius);
         panel.add(this);
         panel.revalidate();
     }
-    public GameButton(PondObject obj, String imgName, int width, int height) {
-        this(obj, imgName, width, height, DEFAULT_IMG_WIDTH, DEFAULT_IMG_HEIGHT);
-    }
     public GameButton(PondObject obj, String imgName) {
-        this(obj, imgName, DEFAULT_WIDTH, DEFAULT_HEIGHT, DEFAULT_IMG_WIDTH, DEFAULT_IMG_HEIGHT);
+        this(obj, imgName, DEFAULT_IMG_WIDTH, DEFAULT_IMG_HEIGHT);
     }
     protected void paintComponent(Graphics g) {
         g.drawOval(0, 0, getSize().width - 1, getSize().height - 1);
@@ -87,6 +77,33 @@ public class GameButton extends JButton {
         this.x = x;
         this.y = y;
         setBounds(x, y, width, height);
-//        panel.moveCircle(attackCircle, x, y);
+        attackCircle.moveButton(x, y);
+    }
+    class AttackCircle extends JButton{
+        public int x;
+        public int y;
+        public int attackRadius;
+        public AttackCircle(int x, int y, int attackRadius){
+            this.attackRadius = attackRadius;
+            this.x = (int) (x - 0.5*(this.attackRadius - width));
+            this.y = (int) (y - 0.5*(this.attackRadius - width));
+            setOpaque(false);
+            setContentAreaFilled(false);
+            setBorderPainted(false);
+            setFocusPainted(false);
+            setBounds(this.x, this.y, this.attackRadius, this.attackRadius);
+            panel.add(this);
+            panel.revalidate();
+        }
+        protected void paintComponent(Graphics g) {
+            g.setColor(Color.RED);
+            g.drawOval(0, 0, getSize().width - 1, getSize().height - 1);
+            super.paintComponent(g);
+        }
+        public void moveButton(int x, int y) {
+            this.x = (int) (x - 0.5*(this.attackRadius - width));
+            this.y = (int) (y - 0.5*(this.attackRadius - width));
+            setBounds(this.x, this.y, this.attackRadius, this.attackRadius);
+        }
     }
 }

@@ -18,11 +18,12 @@ public class PondApplication extends javafx.application.Application {
     public JFrame frame = new GameFrame(this, "Pond");
     static GamePanel panel;
     public Fox fox;
-    public static ArrayList<Frog> listFrogs = new ArrayList<>();
-    public static ArrayList<Fly> listFlys = new ArrayList<>();
+    public static ArrayList<PondObject> listFrogs = new ArrayList<>();
+    public static ArrayList<PondObject> listFlys = new ArrayList<>();
     private int i; //Number of flies created
     private int j; //Number of frogs created
-    private Dimension screenSize;
+    public Dimension screenSize;
+    private int day = 1;
 
 
     @Override
@@ -42,7 +43,7 @@ public class PondApplication extends javafx.application.Application {
             public void actionPerformed(ActionEvent e) {goToNextDay();}
         });
         panel.add(button);
-        initiateGame(panel);
+        initiateGame();
         frame.setFocusable(true);
         frame.add(panel);
         frame.setSize((int) screenSize.getWidth(), (int) screenSize.getHeight());
@@ -51,8 +52,8 @@ public class PondApplication extends javafx.application.Application {
         frame.setVisible(true);
     }
     private void addFly(){
-        int x = ThreadLocalRandom.current().nextInt(10, (int) screenSize.getWidth() - 150);
-        int y = ThreadLocalRandom.current().nextInt(10, (int) screenSize.getHeight() - 100);
+        int x = ThreadLocalRandom.current().nextInt(100, (int) screenSize.getWidth() - 200);
+        int y = ThreadLocalRandom.current().nextInt(100, (int) screenSize.getHeight() - 200);
         Fly fly = new Fly(this, Integer.toString(i), x, y);
         fly.render();
         listFlys.add(fly);
@@ -60,13 +61,13 @@ public class PondApplication extends javafx.application.Application {
     private void addFrog(){
         ArrayList<String> listNamesFrogs = new ArrayList<>(Arrays.asList("Noé", "Thibaut", "Benjamin", "Baptiste", "Tea", "Alice", "Antoine"));
         int j1 = j%listNamesFrogs.size();
-        int x = ThreadLocalRandom.current().nextInt(10, (int) screenSize.getWidth() - 150);
-        int y = ThreadLocalRandom.current().nextInt(10, (int) screenSize.getHeight() - 100);
+        int x = ThreadLocalRandom.current().nextInt(100, (int) screenSize.getWidth() - 200);
+        int y = ThreadLocalRandom.current().nextInt(100, (int) screenSize.getHeight() - 200);
         Frog frog = new Frog(this, listNamesFrogs.get(j1), x, y);
         frog.render();
         listFrogs.add(frog);
     }
-    private void initiateGame(GamePanel panel) {
+    private void initiateGame() {
 
 //        Create Frogs
         screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -81,40 +82,47 @@ public class PondApplication extends javafx.application.Application {
         for (i=0; i<randomNum2; ++i){
             addFly();
         }
-        System.out.println(listFlys.size() + " flys in the pond");
+        System.out.println(listFlys.size() + " flies in the pond");
 
 //        Create Fox
-        int x = ThreadLocalRandom.current().nextInt(10, (int) screenSize.getWidth() - 150);
-        int y = ThreadLocalRandom.current().nextInt(10, (int) screenSize.getHeight() - 100);
-        fox = new Fox(this, "Bruno", 7., x, y);
+        int x = ThreadLocalRandom.current().nextInt(100, (int) screenSize.getWidth() - 200);
+        int y = ThreadLocalRandom.current().nextInt(100, (int) screenSize.getHeight() - 200);
+        fox = new Fox(this, "Bruno", x, y);
         fox.render();
         System.out.println(1 + " fox in the pond");
+        System.out.println("Jour "+day);
+        System.out.println(fox.findDirectionOfNearestFrog());
+        System.out.println(fox.findDirectionOfNearestFly());
     }
 
     void goToNextDay(){
-        if (listFlys.size() < 3){                   //We spawn a fly if they are not enough in the game
+        day += 1;
+        if (listFlys.size() < 4){                   //We spawn a fly if they are not enough in the game
             i++;
             addFly();
         }
-        if (listFrogs.size() < 3){                  //We spawn a frog if they are not enough in the game
+        if (listFrogs.size() < 4){                    //We spawn a frog if they are not enough in the game
             j++;
             addFrog();
         }
         try {
-            for (Frog frog : listFrogs){
-                String success1 = fox.eat(frog);
-                if (!success1.contains("false")){   //If the fox eats a frog, we print a message
+            for (PondObject frog : listFrogs){
+                String success1 = fox.eat((Frog) frog);
+                if (!success1.contains("false")){    //If the fox eats a frog, we print a message
                     System.out.println(success1);
                 }
-                frog.move();                //We make every frog running to the nearest fly
+                ((Frog) frog).move();                //We make every frog running to the nearest fly
             }
         }
-        catch(Exception e) {                        //If the fox eats a frog this raises an error due to the for loop but it does not matter
+        catch(Exception e) {                         //If the fox eats a frog this raises an error due to the for loop but it does not matter
         }
-        for (Fly fly : listFlys){
-            fly.move("random");              //Every fly flies randomly...
-            fly.sting(fox);                         //... and try to sting the fox
+        for (PondObject fly : listFlys){
+            ((Fly) fly).move("random");        //Every fly flies randomly...
+            ((Fly) fly).sting(fox);                  //... and try to sting the fox
         }
+        System.out.println("Jour "+day);
+        System.out.println(fox.findDirectionOfNearestFrog());
+        System.out.println(fox.findDirectionOfNearestFly());
         frame.setFocusable(true);
         frame.setVisible(true);
     }

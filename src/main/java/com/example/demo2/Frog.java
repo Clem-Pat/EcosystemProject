@@ -6,26 +6,22 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Frog extends PondObject{
     public double tongueSpeed;
-    public static final double DEFAULT_MASS = 5;
-    public static final double DEFAULT_TONGUE_SPEED = 8;
 
     //Constructor
-    public Frog(PondApplication pond, String name, double mass, double tongueSpeed, int x, int y) {
+    public Frog(PondApplication pond, String name, int x, int y) {
         this.type = "frog";
         this.pond = pond;
         this.name = name;
-        this.mass = mass;
-        this.tongueSpeed = tongueSpeed;
         this.x = x;
         this.y = y;
-        this.attackRadius = 100;
+        this.mass = 10;
+        this.tongueSpeed = 8;
+        this.radius = 80;
+        this.attackRadius = this.radius + 40;
         this.speed = 1;
     }
-    public Frog(PondApplication pond, String name, int x, int y) {
-        this(pond, name, DEFAULT_MASS, DEFAULT_TONGUE_SPEED, x, y);
-    }
     public String eat(Fly fly){
-        if (Math.sqrt(Math.pow(this.x - fly.x, 2) + Math.pow(this.y - fly.y, 2)) <= 100){
+        if (Math.sqrt(Math.pow((this.x+0.5*this.radius) - (fly.x+0.5*fly.radius), 2) + Math.pow((this.y+0.5*this.radius) - (fly.y+0.5*fly.radius), 2)) <= this.radius + 0.5*(this.attackRadius-this.radius)){
             if (fly.isDead()){
                 return "The fly "+fly.name+" is already dead";
             }
@@ -46,7 +42,7 @@ public class Frog extends PondObject{
     }
     public void move() {
         if (!(pond.listFlys.isEmpty())){
-            Fly nearestFly = findNearestFly(pond.listFlys);
+            Fly nearestFly = findNearestFly();
             goTo(nearestFly.x, nearestFly.y);
             String success = eat(nearestFly);
             if (success.contains("eat")){pond.listFlys.remove(nearestFly);}  // the frog eats the fly, we erase it
@@ -56,16 +52,6 @@ public class Frog extends PondObject{
             int x = ThreadLocalRandom.current().nextInt(1, 1800);
             int y = ThreadLocalRandom.current().nextInt(1, 600);
             goTo(x, y);
-        }
-    }
-    public Fly findNearestFly(ArrayList<Fly> listFlys){
-        if (listFlys.isEmpty()){ return null ;}
-        else{
-            ArrayList<Float> listDistances = new ArrayList<Float>();
-            for (Fly fly : listFlys){
-                listDistances.add((float) Math.sqrt(Math.pow(this.x - fly.x, 2) + Math.pow(this.y - fly.y, 2)));
-            }
-            return listFlys.get(listDistances.indexOf(Collections.min(listDistances)));
         }
     }
     public void goTo(int x2, int y2){
@@ -84,14 +70,18 @@ public class Frog extends PondObject{
         listDistances.add((float) Math.sqrt(Math.pow(this.x + nP*speed - x2, 2) + Math.pow(this.y + nP*speed - y2, 2)));
 
         int minIndex = listDistances.indexOf(Collections.min(listDistances));
-        if (minIndex == 0){this.x = (int) (this.x - nP*speed); this.y = (int) (this.y - nP*speed);}
-        if (minIndex == 1){this.x = this.x           ; this.y = (int) (this.y - nP*speed);}
-        if (minIndex == 2){this.x = (int) (this.x + nP*speed); this.y = (int) (this.y - nP*speed);}
-        if (minIndex == 3){this.x = (int) (this.x - nP*speed); this.y = this.y           ;}
-        if (minIndex == 5){this.x = (int) (this.x + nP*speed); this.y = this.y           ;}
-        if (minIndex == 6){this.x = (int) (this.x - nP*speed); this.y = (int) (this.y + nP*speed);}
-        if (minIndex == 7){this.x = this.x           ; this.y = (int) (this.y + nP*speed);}
-        if (minIndex == 8){this.x = (int) (this.x + nP*speed); this.y = (int) (this.y + nP*speed);}
-        button.moveButton(this.x, this.y);
+        int futureX = 0, futureY = 0;
+        if (minIndex == 0){futureX = (int) (this.x - nP*speed); futureY = (int) (this.y - nP*speed);}
+        if (minIndex == 1){futureX = this.x                   ; futureY = (int) (this.y - nP*speed);}
+        if (minIndex == 2){futureX = (int) (this.x + nP*speed); futureY = (int) (this.y - nP*speed);}
+        if (minIndex == 3){futureX = (int) (this.x - nP*speed); futureY = this.y           ;}
+        if (minIndex == 5){futureX = (int) (this.x + nP*speed); futureY = this.y           ;}
+        if (minIndex == 6){futureX = (int) (this.x - nP*speed); futureY = (int) (this.y + nP*speed);}
+        if (minIndex == 7){futureX = this.x                   ; futureY = (int) (this.y + nP*speed);}
+        if (minIndex == 8){futureX = (int) (this.x + nP*speed); futureY = (int) (this.y + nP*speed);}
+
+        if ((futureX > 100) && (futureX < (int) pond.screenSize.getWidth() - 200)){this.x = futureX;}  //Check if it does not get out of the screen
+        if ((futureY > 100) && (futureY < (int) pond.screenSize.getHeight() - 200)) {this.y = futureY;}
+        button.moveButton(this.x, this.y);                          //Move the related button
     }
 }

@@ -1,23 +1,17 @@
 package com.example.demo2;
 
 public class Fox extends PondObject{
-    public static final double DEFAULT_MASS = 5;
-    public static final int DEFAULT_X = 30;
-    public static final int DEFAULT_Y = 30;
 
-
-    public Fox(PondApplication pond, String name, double mass, int x, int y) {
+    public Fox(PondApplication pond, String name, int x, int y) {
         this.type = "fox";
         this.pond = pond;
         this.name = name;
-        this.mass = mass;
+        this.mass = 5;
         this.x = x;
         this.y = y;
-        this.attackRadius = 70;
+        this.radius = 100;
+        this.attackRadius = this.radius;
         this.speed = 1;
-    }
-    public Fox(PondApplication pond, String name) {
-        this(pond, name, DEFAULT_MASS, DEFAULT_X, DEFAULT_Y);
     }
     public void move(String direction){
         this.mass = this.mass - 0.1; //It starves as it moves
@@ -33,7 +27,7 @@ public class Fox extends PondObject{
     }
     public String eat(Frog frog){
 
-        if (Math.sqrt(Math.pow(this.x - frog.x, 2) + Math.pow(this.y - frog.y, 2)) <= this.attackRadius){
+        if (Math.sqrt(Math.pow((this.x+0.5*this.radius) - (frog.x+0.5*frog.radius), 2) + Math.pow((this.y+0.5*this.radius) - (frog.y+0.5*frog.radius), 2)) <=  this.radius + 0.5*(this.attackRadius-this.radius)){
             if (frog.isDead()){
                 return "The fly "+frog.name+" is already dead";
             }
@@ -44,5 +38,20 @@ public class Fox extends PondObject{
             }
         }
         return "false";
+    }
+    public String findDirectionOfNearestObject(PondObject nearestObject){
+        String result = "";
+        result = result + String.format("%.2f", Math.sqrt(Math.pow(this.x - nearestObject.x, 2) + Math.pow(this.y - nearestObject.y, 2))) + " pixels dans la direction : ";
+        if      (nearestObject.y - this.y < - attackRadius) {result = result + "N";}
+        else if (nearestObject.y - this.y > attackRadius)   {result = result + "S";}
+        if      (nearestObject.x - this.x < - attackRadius) {result = result + "O";}
+        else if (nearestObject.x - this.x > attackRadius)   {result = result + "E";}
+        return result;
+    }
+    public String findDirectionOfNearestFrog(){
+        return "Grenouille la plus proche : " + findDirectionOfNearestObject(findNearestFrog());
+    }
+    public String findDirectionOfNearestFly(){
+        return "Mouche la plus proche : " + findDirectionOfNearestObject(findNearestFly());
     }
 }

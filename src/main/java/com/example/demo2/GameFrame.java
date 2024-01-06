@@ -13,18 +13,18 @@ public class GameFrame extends JFrame implements KeyListener {
     }
     @Override
     public void keyTyped(KeyEvent e) {
-        if (!app.fox.isDead()){
-            app.fox.move(KeyEvent.getKeyText(e.getKeyCode()));
-            String direction = KeyEvent.getKeyText(e.getKeyCode());
-            if (direction.equals("Up") || direction.equals("Down") || direction.equals("Right") || direction.equals("Left")){app.goToNextDay();}
+        String direction = KeyEvent.getKeyText(e.getKeyCode());
+        if (direction.equals("Up") || direction.equals("Down") || direction.equals("Right") || direction.equals("Left")){
+            if (!app.fox.isDead()){
+                app.fox.move(KeyEvent.getKeyText(e.getKeyCode()));
+                app.goToNextDay();
+            }
         }
     }
-
     @Override
     public void keyPressed(KeyEvent e) {
         keyTyped(e);
     }
-
     @Override
     public void keyReleased(KeyEvent e) {
     }

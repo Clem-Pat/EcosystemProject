@@ -3,7 +3,7 @@ package com.example.demo2;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Fly extends PondObject{
-    public static final int DEFAULT_MASS = 3;
+    public static final int DEFAULT_MASS = 5;
     public static final int DEFAULT_SPEED = 2;
 
     //Constructor
@@ -15,7 +15,8 @@ public class Fly extends PondObject{
         this.speed = speed;
         this.x = x;
         this.y = y;
-        this.attackRadius = 70;
+        this.radius = 70;
+        this.attackRadius = this.radius;
     }
     public Fly(PondApplication pond, String name, int x, int y) {
         this(pond, name, x, y, DEFAULT_MASS, DEFAULT_SPEED);
@@ -37,13 +38,17 @@ public class Fly extends PondObject{
             if (this.y > 400){directionY = -1;}
             else {directionY = 1;}
         }
-        this.x = (int) (this.x + directionX*nP*speed);
-        this.y = (int) (this.y + directionY*nP*speed);
+        if ((this.x + directionX*nP*speed > 100) && (this.x + directionX*nP*speed < pond.screenSize.getWidth() - 200)){
+            this.x = (int) (this.x + directionX*nP*speed);
+        }
+        if ((this.y + directionY*nP*speed > 100) && (this.y + directionY*nP*speed < pond.screenSize.getHeight() - 200)){
+            this.y = (int) (this.y + directionY*nP*speed);
+        }
         button.moveButton(this.x, this.y);
     }
     public void sting(Fox fox) {
         if (!fox.isDead()){
-            if (Math.sqrt(Math.pow(this.x - fox.x, 2) + Math.pow(this.y - fox.y, 2)) <= this.attackRadius){
+            if (Math.sqrt(Math.pow((this.x+0.5*this.radius) - (fox.x+0.5*fox.radius), 2) + Math.pow((this.y+0.5*this.radius) - (fox.y+0.5*fox.radius), 2)) <=  this.radius + 0.5*(this.attackRadius-this.radius)){
                 System.out.println("The fly " + this.name + " stings the fox " + fox.name);
                 fox.kill();
             }
