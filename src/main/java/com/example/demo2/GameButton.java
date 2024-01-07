@@ -14,7 +14,7 @@ public class GameButton extends JButton {
     public int imgWidth;
     public int imgHeight;
     public int attackRadius;
-    private final AttackCircle attackCircle;
+    public final AttackCircle attackCircle;
     public static final int DEFAULT_IMG_WIDTH = 40;
     public static final int DEFAULT_IMG_HEIGHT = 40;
     public GameButton(Animal obj, String imgName, int imgWidth, int imgHeight){
