@@ -22,7 +22,7 @@ public class PondApplication extends javafx.application.Application {
     private int i; //Number of flies created
     private int j; //Number of frogs created
     public Dimension screenSize;
-    private int day = 1;
+    public int day = 1;
 
     @Override
     public void start(Stage stage){
@@ -46,14 +46,14 @@ public class PondApplication extends javafx.application.Application {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
-    private void addFly(){
+    public void addFly(){
         int x = ThreadLocalRandom.current().nextInt(100, (int) screenSize.getWidth() - 200);
         int y = ThreadLocalRandom.current().nextInt(100, (int) screenSize.getHeight() - 200);
         Fly fly = new Fly(this, Integer.toString(i), x, y);
         fly.render();
         listFlies.add(fly);
     }
-    private void addFrog(){
+    public void addFrog(){
         ArrayList<String> listNamesFrogs = new ArrayList<>(Arrays.asList("Noé", "Thibaut", "Benjamin", "Baptiste", "Tea", "Alice", "Antoine"));
         int j1 = j%listNamesFrogs.size();
         int x = ThreadLocalRandom.current().nextInt(100, (int) screenSize.getWidth() - 200);
@@ -62,7 +62,7 @@ public class PondApplication extends javafx.application.Application {
         frog.render();
         listFrogs.add(frog);
     }
-    private void initiateGame() {
+    public void initiateGame() {
 
 //        Create Frogs
         screenSize = Toolkit.getDefaultToolkit().getScreenSize();
