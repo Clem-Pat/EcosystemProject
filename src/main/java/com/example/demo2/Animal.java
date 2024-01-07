@@ -4,14 +4,16 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Animal {
-    public String type;
-    public String name;
-    public double mass;
-    public int x;
-    public int y;
-    public int radius;
-    public int attackRadius;
-    public double speed;
+    public String type = "none";
+    public String name = "none";
+    public double mass = 0;
+    public int age = 0;
+    public int x = 0;
+    public int y = 0;
+    public int radius = 0;
+    public int attackRadius = 0;
+    public double speed = 0;
+    public boolean canKill = false;
     public GameButton button;
     public PondApplication pond;
 
@@ -23,6 +25,26 @@ public class Animal {
         button.changeImage("dead"+type.substring(0,1).toUpperCase()+type.substring(1));
         if (type.equals("frog")){pond.listFrogs.remove(this);}
         else if (type.equals("fly")){pond.listFlies.remove(this);}
+    }
+    public void aging(){
+        this.age += 1;
+        if (this.age < 24){
+            this.speed += 1;
+            if (this.type.equals("frog")){
+                Frog frog = (Frog) this;
+                frog.tongueSpeed += 1;
+            }
+        }
+        else{
+            this.speed -= 1;
+            if (this.type.equals("frog")){
+                Frog frog = (Frog) this;
+                frog.tongueSpeed -= 1;
+            }
+        }
+        if (this.age > 5){
+            this.canKill = true;
+        }
     }
     public Animal findNearestObject(ArrayList<Animal> listObject){
         if (listObject.isEmpty()){ return null ;}

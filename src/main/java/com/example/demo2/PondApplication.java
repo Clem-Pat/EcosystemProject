@@ -100,6 +100,7 @@ public class PondApplication extends javafx.application.Application {
             j++;
             addFrog();
         }
+        fox.aging();
         try {
             for (Animal frog : listFrogs){
                 String success1 = fox.eat((Frog) frog);
@@ -107,6 +108,7 @@ public class PondApplication extends javafx.application.Application {
                     System.out.println(success1);
                 }
                 ((Frog) frog).move();                //We make every frog running to the nearest fly
+                frog.aging();
             }
         }
         catch(Exception e) {                         //If the fox eats a frog this raises an error due to the for loop, but it does not matter
@@ -114,6 +116,7 @@ public class PondApplication extends javafx.application.Application {
         for (Animal fly : listFlies){
             ((Fly) fly).move("random");        //Every fly flies randomly...
             ((Fly) fly).sting(fox);                  //... and try to sting the fox
+            fly.aging();
         }
         System.out.println("\nJour "+day);
         System.out.println(fox.findDirectionOfNearestFrog());

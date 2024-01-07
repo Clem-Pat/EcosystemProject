@@ -36,4 +36,14 @@ public class GamePanel extends JPanel {
             g.drawOval(0, 0,  this.getParent().getWidth()/2, this.getParent().getHeight()/2);
         }
     }
+    public boolean contains(GameButton button) {
+        Component[] components = getComponents();
+        for (Component component : components) {
+            if (component == button) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

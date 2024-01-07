@@ -57,23 +57,26 @@ public class Frog extends Animal{
         button.moveButton(this.x, this.y); //Move the related button
     }
     public String eat(Fly fly){
-        if (Math.sqrt(Math.pow((this.x+0.5*this.radius) - (fly.x+0.5*fly.radius), 2) + Math.pow((this.y+0.5*this.radius) - (fly.y+0.5*fly.radius), 2)) <= this.radius + 0.5*(this.attackRadius-this.radius)){
-            if (fly.isDead()){
-                return "The fly "+fly.name+" is already dead";
-            }
-            else {
-                if (this.tongueSpeed >= fly.speed){
-                    this.mass = this.mass + fly.mass;
-                    fly.kill();
-                    return this.name + " eats the fly " + fly.name;
+        if (this.canKill){
+            if (Math.sqrt(Math.pow((this.x+0.5*this.radius) - (fly.x+0.5*fly.radius), 2) + Math.pow((this.y+0.5*this.radius) - (fly.y+0.5*fly.radius), 2)) <= this.radius + 0.5*(this.attackRadius-this.radius)){
+                if (fly.isDead()){
+                    return "The fly "+fly.name+" is already dead";
                 }
                 else {
-                    return "the fly " + fly.name + " is too quick !!";
+                    if (this.tongueSpeed >= fly.speed){
+                        this.mass = this.mass + fly.mass;
+                        fly.kill();
+                        return this.name + " eats the fly " + fly.name;
+                    }
+                    else {
+                        return "the fly " + fly.name + " is too quick !!";
+                    }
                 }
             }
+            else {
+                return "the fly is too far";
+            }
         }
-        else {
-            return "the fly is too far";
-        }
+        return "cannot kill";
     }
 }
