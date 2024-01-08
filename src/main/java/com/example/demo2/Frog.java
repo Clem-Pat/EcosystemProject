@@ -13,19 +13,10 @@ public class Frog extends Animal{
         this.x = x;
         this.y = y;
         this.mass = 5;
-        this.tongueSpeed = 8;
+        this.tongueSpeed = 1.5;
         this.radius = 80;
         this.attackRadius = this.radius + 40;
         this.speed = 2;
-    }
-    public int getX() {
-        return this.x;
-    }
-    public int getY () {
-        return this.y;
-    }
-    public double getMass (){
-        return this.mass;
     }
     public void move() {
         this.mass = this.mass - 0.1;  // if it can't eat, it starves

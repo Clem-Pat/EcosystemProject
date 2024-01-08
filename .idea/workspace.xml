@@ -4,36 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fad92a7e-750f-4204-a52f-c4bc9078c177" name="Changes" comment="Corpse disappear 15 days after death">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_01_2024_22_13__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_01_2024_22_13__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_01_2024_22_13__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_01_2024_22_13__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_01_2024_10_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_01_2024_10_09__Changes_.xml" afterDir="false" />
+    <list default="true" id="fad92a7e-750f-4204-a52f-c4bc9078c177" name="Changes" comment="Tea push : equilibre du jeu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/Fly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/Fly.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/Fox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/Fox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/Frog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/Frog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/GameButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/GameButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/PondApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/PondApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/AnimalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/AnimalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/FlyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/FlyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/FoxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/FoxTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/FrogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/FrogTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/GameButtonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/GameButtonTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/GamePanelTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/GameFrameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/GameFrameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/PondApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/PondApplicationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/Animal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/Fly.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/Fly.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/FlyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/AnimalTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/Fox.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/Fox.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/FoxTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/FrogTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/GameButton$AttackCircle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/GameButton$AttackCircle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/Frog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/Frog.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/GameButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/GameButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/GameButtonTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/GameFrameTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/GamePanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/GamePanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/GamePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/GamePanelTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/PondApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/PondApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/PondApplicationTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/AnimalTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/FlyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/FlyTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/FoxTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/FoxTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/FrogTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/FrogTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/GameButtonTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/GameButtonTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/GameFrameTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/GameFrameTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/PondApplicationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/PondApplicationTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,56 +64,8 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="AnimalTest.isDeadWhenMassIsNegative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.demo2" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo2.AnimalTest" />
-      <option name="METHOD_NAME" value="isDeadWhenMassIsNegative" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AnimalTest.isNotDeadWhenMassIsPositive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.demo2" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo2.AnimalTest" />
-      <option name="METHOD_NAME" value="isNotDeadWhenMassIsPositive" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FlyTest.moveRandomly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.demo2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.demo2" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo2.FlyTest" />
-      <option name="METHOD_NAME" value="moveRandomly" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameButtonTest.constructorWithImageNameAndSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.FrogTest.testAging">
+    <configuration name="FoxTest.findDirectionOfNearestFly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo2" />
       <extension name="coverage">
         <pattern>
@@ -127,8 +74,72 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.demo2.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.example.demo2.tests.GameButtonTest" />
-      <option name="METHOD_NAME" value="constructorWithImageNameAndSize" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo2.tests.FoxTest" />
+      <option name="METHOD_NAME" value="findDirectionOfNearestFly" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FrogTest.testAging" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo2.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo2.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo2.tests.FrogTest" />
+      <option name="METHOD_NAME" value="testAging" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FrogTest.testEat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo2.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo2.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo2.tests.FrogTest" />
+      <option name="METHOD_NAME" value="testEat" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FrogTest.testGoTo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo2.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo2.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo2.tests.FrogTest" />
+      <option name="METHOD_NAME" value="testGoTo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FrogTest.testMove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo2.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo2.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo2.tests.FrogTest" />
+      <option name="METHOD_NAME" value="testMove" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -149,10 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GameButtonTest.constructorWithImageNameAndSize" />
-        <item itemvalue="JUnit.FlyTest.moveRandomly" />
-        <item itemvalue="JUnit.AnimalTest.isDeadWhenMassIsNegative" />
-        <item itemvalue="JUnit.AnimalTest.isNotDeadWhenMassIsPositive" />
+        <item itemvalue="JUnit.FrogTest.testAging" />
+        <item itemvalue="JUnit.FrogTest.testEat" />
+        <item itemvalue="JUnit.FrogTest.testMove" />
+        <item itemvalue="JUnit.FrogTest.testGoTo" />
+        <item itemvalue="JUnit.FoxTest.findDirectionOfNearestFly" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +194,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704709530613</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Tea push : equilibre du jeu">
+      <option name="closed" value="true" />
+      <created>1704711322040</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704711322040</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Tea push : equilibre du jeu">
+      <option name="closed" value="true" />
+      <created>1704711337151</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704711337151</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +218,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Corpse disappear 15 days after death" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corpse disappear 15 days after death" />
+    <MESSAGE value="Tea push : equilibre du jeu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tea push : equilibre du jeu" />
   </component>
 </project>

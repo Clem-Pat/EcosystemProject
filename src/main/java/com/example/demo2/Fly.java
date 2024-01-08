@@ -27,7 +27,7 @@ public class Fly extends Animal{
             directionY = ThreadLocalRandom.current().nextInt(-1, 2);
         }
         else if (order.equals("flee")){ //A frog tried to catch us, we try to flee
-            nP = 20; //Number of pixel it can move through each day
+            nP = 30; //Number of pixel it can move through each day
             if (this.x > 600){directionX = -1;}
             else {directionX = 1;}
             if (this.y > 400){directionY = -1;}

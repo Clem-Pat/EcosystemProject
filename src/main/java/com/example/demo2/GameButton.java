@@ -55,7 +55,7 @@ public class GameButton extends JButton {
             ImageIcon icon = new ImageIcon(((new ImageIcon(imageURL)).getImage()).getScaledInstance(imgWidth, imgHeight, java.awt.Image.SCALE_SMOOTH));
             setIcon(icon);
         } else {
-            System.err.println("Image introuvable !");
+            System.out.println("Image introuvable !");
         }
     }
     public void moveButton(int x, int y) {

@@ -33,6 +33,7 @@ public class Fox extends Animal{
                 }
                 else{
                     this.mass = this.mass + frog.mass;
+
                     frog.kill();
                     return this.name + " eats the frog " + frog.name;
                 }

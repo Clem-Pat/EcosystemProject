@@ -1,5 +1,9 @@
-package com.example.demo2;
+package com.example.demo2.tests;
 
+import com.example.demo2.Animal;
+import com.example.demo2.Frog;
+import com.example.demo2.GameButton;
+import com.example.demo2.PondApplication;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -15,6 +19,8 @@ public class AnimalTest {
     public void setUp() {
         testAnimal = new Animal();
         pond = new PondApplication();
+        testAnimal.pond = pond;
+        testAnimal.button = new GameButton(testAnimal, "animal");
     }
 
     @Test
@@ -39,7 +45,7 @@ public class AnimalTest {
     public void killSetsMassToZero() {
         testAnimal.mass = 10;
         testAnimal.kill();
-        assertEquals(0, testAnimal.mass);
+        assertEquals(0, (int) testAnimal.mass);
     }
 
     @Test
@@ -85,39 +91,41 @@ public class AnimalTest {
     @Test
     public void testAgingForYoungAnimal() {
         Animal youngAnimal = new Animal();
+        youngAnimal.pond = pond;
         youngAnimal.age = 3; // Âge inférieur à 24
-        youngAnimal.speed = 5; // Vitesse initiale
+        youngAnimal.speed = 2; // Vitesse initiale
 
         youngAnimal.aging();
 
         assertEquals(4, youngAnimal.age);
-        assertEquals(6, youngAnimal.speed);
+        assertEquals(2.1, youngAnimal.speed, 0.01);
     }
 
     @Test
     public void testAgingForOldAnimal() {
         Animal oldAnimal = new Animal();
+        oldAnimal.pond = pond;
         oldAnimal.age = 25; // Âge supérieur à 24
-        oldAnimal.speed = 8; // Vitesse initiale
+        oldAnimal.speed = 5; // Vitesse initiale
 
         oldAnimal.aging();
 
         assertEquals(26, oldAnimal.age);
-        assertEquals(7, oldAnimal.speed); // La vitesse diminue car l'animal est vieux
+        assertEquals(4.9, oldAnimal.speed, 0.01); // speed decreases as the animal is old
     }
 
     @Test
     public void testAgingForYoungFrog() {
         Frog youngFrog = new Frog(pond, "Testfrog",1,2);
         youngFrog.age = 3; // Âge inférieur à 24
-        youngFrog.speed = 5; // Vitesse initiale
+        youngFrog.speed = 2; // Vitesse initiale
         youngFrog.tongueSpeed = 10; // Vitesse de la langue initiale
 
         youngFrog.aging();
 
         assertEquals(4, youngFrog.age);
-        assertEquals(6, youngFrog.speed);
-        assertEquals(11, youngFrog.tongueSpeed); // La vitesse de la langue doit augmenter pour les grenouilles
+        assertEquals(2.1, youngFrog.speed, 0.01);
+        assertEquals(10.1, youngFrog.tongueSpeed, 0.01); // La vitesse de la langue doit augmenter pour les grenouilles
     }
 }
 

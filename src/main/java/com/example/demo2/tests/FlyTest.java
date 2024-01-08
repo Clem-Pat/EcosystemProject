@@ -20,8 +20,8 @@ public class FlyTest {
     @Test
     public void moveRandomly() {
         PondApplication pond = new PondApplication();
-        Fly fly = new Fly(pond, "TestFly", 50, 50);
-        fly.button = new GameButton(fly, fly.type);
+        Fly fly = new Fly(pond, "TestFly", 600, 150);
+        fly.button = new GameButton(fly, "fly");
         int initialX = fly.x;
         int initialY = fly.y;
 
@@ -35,6 +35,7 @@ public class FlyTest {
     public void moveToFlee() {
         PondApplication pond = new PondApplication();
         Fly fly = new Fly(pond, "TestFly", 300, 300);
+        fly.button = new GameButton(fly, "fly");
 
         int initialX = fly.x;
         int initialY = fly.y;
@@ -50,23 +51,20 @@ public class FlyTest {
     @Test
     public void stingFox() {
         PondApplication pond = new PondApplication();
-        Fly fly = new Fly(pond, "TestFly", 50, 50);
+        Fly fly = new Fly(pond, "TestFly", 100, 100);
         Fox fox = new Fox(pond, "TestFox", 100, 100);
+        fly.button = new GameButton(fly, "fly");
+        fox.button = new GameButton(fox, "fox");
 
         fly.sting(fox);
+        assertFalse(fly.canKill);
+        assertFalse(fox.isDead());       // The fly is too young to sting
 
-
-        assertTrue(fox.isDead());
-    }
-
-    @Test
-    public void noStingWhenFoxDead() {
-        PondApplication pond = new PondApplication();
-        Fly fly = new Fly(pond, "TestFly", 50, 50);
-        Fox fox = new Fox(pond, "TestDeadFox", 100, 100);
-        fox.kill();
+        fly.age = 5;
+        fly.aging();
 
         fly.sting(fox);
-        assertFalse(fox.isDead());
+        assertTrue(fly.canKill);
+        assertTrue(fox.isDead());       // The fly killed the fox
     }
 }

@@ -31,16 +31,19 @@ public class Animal {
     }
     public void aging(){
         this.age += 1;
-        if (this.speed < 3){
-            this.speed += 0.1;
-        }
-        if (this.age < 24){                     //The tongueSpeed of frogs grow each day
-            if (this.type.equals("frog")){
+        if (this.age < 24){
+            if (this.speed < 3){
+                this.speed += 0.1;          //The speed of young animals increases
+            }
+            if (this.type.equals("frog")){  //The tongueSpeed of frogs grow each day
                 Frog frog = (Frog) this;
                 frog.tongueSpeed += 0.1;
             }
         }
         else{
+            if (this.speed > 1){
+                this.speed -= 0.1;          //The speed of old animals decreases
+            }
             if (this.type.equals("frog")){      //If the frog is too old, its tongueSpeed decreases
                 Frog frog = (Frog) this;
                 frog.tongueSpeed -= 0.1;

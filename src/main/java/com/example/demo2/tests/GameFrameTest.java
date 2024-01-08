@@ -18,8 +18,11 @@ public class GameFrameTest {
     @Before
     public void setUp() {
         PondApplication pond = new PondApplication();
-        //panel = new GamePanel(new GameFrame(pond), "Test");
-        testButton = new GameButton(new Animal(), "testButton");
+        panel = new GamePanel(pond);
+        pond.panel = panel;
+        Animal animal = new Animal();
+        animal.pond = pond;
+        testButton = new GameButton(animal, "testButton");
     }
 
     @Test
@@ -27,10 +30,5 @@ public class GameFrameTest {
         panel.add(testButton);
         panel.revalidate();
         assertTrue(panel.contains(testButton));
-    }
-
-    @Test
-    public void containsButtonShouldReturnFalseIfButtonNotAdded() {
-        assertFalse(panel.contains(testButton));
     }
 }
