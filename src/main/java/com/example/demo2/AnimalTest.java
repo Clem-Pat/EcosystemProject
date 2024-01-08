@@ -9,10 +9,12 @@ import java.util.ArrayList;
 public class AnimalTest {
 
     private Animal testAnimal;
+    private PondApplication pond;
 
     @Before
     public void setUp() {
         testAnimal = new Animal();
+        pond = new PondApplication();
     }
 
     @Test
@@ -79,5 +81,44 @@ public class AnimalTest {
         assertNull(testAnimal.findNearestFrog());
     }
 
+
+    @Test
+    public void testAgingForYoungAnimal() {
+        Animal youngAnimal = new Animal();
+        youngAnimal.age = 3; // Âge inférieur à 24
+        youngAnimal.speed = 5; // Vitesse initiale
+
+        youngAnimal.aging();
+
+        assertEquals(4, youngAnimal.age);
+        assertEquals(6, youngAnimal.speed);
+    }
+
+    @Test
+    public void testAgingForOldAnimal() {
+        Animal oldAnimal = new Animal();
+        oldAnimal.age = 25; // Âge supérieur à 24
+        oldAnimal.speed = 8; // Vitesse initiale
+
+        oldAnimal.aging();
+
+        assertEquals(26, oldAnimal.age);
+        assertEquals(7, oldAnimal.speed); // La vitesse diminue car l'animal est vieux
+    }
+
+    @Test
+    public void testAgingForYoungFrog() {
+        Frog youngFrog = new Frog(pond, "Testfrog",1,2);
+        youngFrog.age = 3; // Âge inférieur à 24
+        youngFrog.speed = 5; // Vitesse initiale
+        youngFrog.tongueSpeed = 10; // Vitesse de la langue initiale
+
+        youngFrog.aging();
+
+        assertEquals(4, youngFrog.age);
+        assertEquals(6, youngFrog.speed);
+        assertEquals(11, youngFrog.tongueSpeed); // La vitesse de la langue doit augmenter pour les grenouilles
+    }
 }
+
 
