@@ -26,15 +26,16 @@ public class Fox extends Animal{
         this.button.moveButton(this.x, this.y);
     }
     public String eat(Frog frog){
-
-        if (Math.sqrt(Math.pow((this.x+0.5*this.radius) - (frog.x+0.5*frog.radius), 2) + Math.pow((this.y+0.5*this.radius) - (frog.y+0.5*frog.radius), 2)) <=  this.radius + 0.5*(this.attackRadius-this.radius)){
-            if (frog.isDead()){
-                return "The fly "+frog.name+" is already dead";
-            }
-            else{
-                this.mass = this.mass + frog.mass;
-                frog.kill();
-                return this.name + " eats the frog " + frog.name;
+        if (this.canKill){
+            if (Math.sqrt(Math.pow((this.x+0.5*this.radius) - (frog.x+0.5*frog.radius), 2) + Math.pow((this.y+0.5*this.radius) - (frog.y+0.5*frog.radius), 2)) <=  this.radius + 0.5*(this.attackRadius-this.radius)){
+                if (frog.isDead()){
+                    return "The fly "+frog.name+" is already dead";
+                }
+                else{
+                    this.mass = this.mass + frog.mass;
+                    frog.kill();
+                    return this.name + " eats the frog " + frog.name;
+                }
             }
         }
         return "false";

@@ -53,10 +53,12 @@ public class Fly extends Animal{
         button.moveButton(this.x, this.y);
     }
     public void sting(Fox fox) {
-        if (!fox.isDead()){
-            if (Math.sqrt(Math.pow((this.x+0.5*this.radius) - (fox.x+0.5*fox.radius), 2) + Math.pow((this.y+0.5*this.radius) - (fox.y+0.5*fox.radius), 2)) <=  this.radius + 0.5*(this.attackRadius-this.radius)){
-                System.out.println("The fly " + this.name + " stings the fox " + fox.name);
-                fox.kill();
+        if (this.canKill){
+            if (!fox.isDead()){
+                if (Math.sqrt(Math.pow((this.x+0.5*this.radius) - (fox.x+0.5*fox.radius), 2) + Math.pow((this.y+0.5*this.radius) - (fox.y+0.5*fox.radius), 2)) <=  this.radius + 0.5*(this.attackRadius-this.radius)){
+                    System.out.println("The fly " + this.name + " stings the fox " + fox.name);
+                    fox.kill();
+                }
             }
         }
     }

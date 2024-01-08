@@ -11,15 +11,13 @@ public class FlyTest {
     @Before
     public void setUp() {
         pond = new PondApplication();
-
-
     }
 
     @Test
     public void moveRandomly() {
         PondApplication pond = new PondApplication();
         Fly fly = new Fly(pond, "TestFly", 50, 50);
-
+        fly.button = new GameButton(fly, fly.type);
         int initialX = fly.getX();
         int initialY = fly.getY();
 
