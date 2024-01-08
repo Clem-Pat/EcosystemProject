@@ -68,7 +68,7 @@ public class GameButton extends JButton {
         this.setVisible(false);
         this.attackCircle.setVisible(false);
     }
-    class AttackCircle extends JButton{
+    public class AttackCircle extends JButton{
         public int x;
         public int y;
         public int attackRadius;

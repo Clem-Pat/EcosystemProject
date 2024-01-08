@@ -15,7 +15,7 @@ public class GameButtonTest {
     public void setUp() {
         PondApplication pond = new PondApplication();
         GameFrame frame = new GameFrame(pond, "Test Frame");
-        panel = new GamePanel(frame, null);
+        panel = new GamePanel(pond);
         frame.add(panel);
     }
 

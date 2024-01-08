@@ -12,7 +12,7 @@ public class Frog extends Animal{
         this.name = name;
         this.x = x;
         this.y = y;
-        this.mass = 10;
+        this.mass = 5;
         this.tongueSpeed = 8;
         this.radius = 80;
         this.attackRadius = this.radius + 40;
@@ -64,7 +64,7 @@ public class Frog extends Animal{
                 }
                 else {
                     if (this.tongueSpeed >= fly.speed){
-                        this.mass = this.mass + fly.mass;
+                        this.mass += fly.mass;
                         fly.kill();
                         return this.name + " eats the fly " + fly.name;
                     }

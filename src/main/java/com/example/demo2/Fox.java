@@ -14,7 +14,7 @@ public class Fox extends Animal{
         this.speed = 1;
     }
     public void move(String direction){
-        this.mass = this.mass - 0.1; //It starves as it moves
+        this.mass = this.mass - 0.2; //It starves as it moves
         int dx =0; int dy = 0;
         int nP = 20;
         if (direction.equals("Left")) {dx = -1;}
@@ -39,20 +39,5 @@ public class Fox extends Animal{
             }
         }
         return "false";
-    }
-    public String findDirectionOfNearestObject(Animal nearestObject){
-        String result = "";
-        result = result + String.format("%.2f", Math.sqrt(Math.pow(this.x - nearestObject.x, 2) + Math.pow(this.y - nearestObject.y, 2))) + " pixels dans la direction : ";
-        if      (nearestObject.y - this.y < - attackRadius) {result = result + "N";}
-        else if (nearestObject.y - this.y > attackRadius)   {result = result + "S";}
-        if      (nearestObject.x - this.x < - attackRadius) {result = result + "O";}
-        else if (nearestObject.x - this.x > attackRadius)   {result = result + "E";}
-        return result;
-    }
-    public String findDirectionOfNearestFrog(){
-        return "Grenouille la plus proche : " + findDirectionOfNearestObject(findNearestFrog());
-    }
-    public String findDirectionOfNearestFly(){
-        return "Mouche la plus proche : " + findDirectionOfNearestObject(findNearestFly());
     }
 }

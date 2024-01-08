@@ -4,19 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fad92a7e-750f-4204-a52f-c4bc9078c177" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="fad92a7e-750f-4204-a52f-c4bc9078c177" name="Changes" comment="Corpse disappear 15 days after death">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_01_2024_22_13__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_01_2024_22_13__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_01_2024_22_13__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_01_2024_22_13__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_01_2024_10_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_01_2024_10_09__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/Fly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/Fly.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/FlyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/FlyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/Fox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/Fox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/Frog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/Frog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/GameButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/GameButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/PondApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/PondApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/GameButton$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/GamePanel$Circle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/PondApplication$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/PondObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/TonguePanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/GameButtonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/GameButtonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/GamePanelTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/Animal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/Fly.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/Fly.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/FlyTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/Fox.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/Fox.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/FoxTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/FrogTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/GameButton$AttackCircle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/GameButton$AttackCircle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/GameButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/GameButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/GameButtonTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/GameFrameTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/GamePanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/GamePanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/GamePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/GamePanelTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/PondApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/PondApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/PondApplicationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/AnimalTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,30 +46,30 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2afH8DkIHtZO3sGCj7VttDAu3GK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Clément Patrizio/Desktop/EcosystemProject",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Clément Patrizio/Desktop/EcosystemProject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.FlyTest.moveRandomly">
+}</component>
+  <component name="RunManager">
     <configuration name="AnimalTest.isDeadWhenMassIsNegative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo2" />
       <extension name="coverage">
@@ -101,6 +118,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameButtonTest.constructorWithImageNameAndSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo2.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo2.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo2.tests.GameButtonTest" />
+      <option name="METHOD_NAME" value="constructorWithImageNameAndSize" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="EcosystemProject" />
       <method v="2">
@@ -116,6 +149,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameButtonTest.constructorWithImageNameAndSize" />
         <item itemvalue="JUnit.FlyTest.moveRandomly" />
         <item itemvalue="JUnit.AnimalTest.isDeadWhenMassIsNegative" />
         <item itemvalue="JUnit.AnimalTest.isNotDeadWhenMassIsPositive" />
@@ -132,9 +166,30 @@
       <updated>1704702551499</updated>
       <workItem from="1704702553209" duration="2332000" />
     </task>
+    <task id="LOCAL-00001" summary="Corpse disappear 15 days after death">
+      <option name="closed" value="true" />
+      <created>1704709512194</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704709512194</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Corpse disappear 15 days after death">
+      <option name="closed" value="true" />
+      <created>1704709530613</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704709530613</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Corpse disappear 15 days after death" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corpse disappear 15 days after death" />
   </component>
 </project>

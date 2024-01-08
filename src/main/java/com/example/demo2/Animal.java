@@ -65,6 +65,21 @@ public class Animal {
     }
     public Fly findNearestFly(){return (Fly) findNearestObject(pond.listFlies);}
     public Frog findNearestFrog(){return (Frog) findNearestObject(pond.listFrogs);}
+    public String findDirectionOfNearestObject(Animal nearestObject){
+        String result = "";
+        result = result + String.format("%.2f", Math.sqrt(Math.pow(this.x - nearestObject.x, 2) + Math.pow(this.y - nearestObject.y, 2))) + " pixels dans la direction : ";
+        if      (nearestObject.y - this.y < - attackRadius) {result = result + "N";}
+        else if (nearestObject.y - this.y > attackRadius)   {result = result + "S";}
+        if      (nearestObject.x - this.x < - attackRadius) {result = result + "O";}
+        else if (nearestObject.x - this.x > attackRadius)   {result = result + "E";}
+        return result;
+    }
+    public String findDirectionOfNearestFrog(){
+        return "Grenouille la plus proche : " + findDirectionOfNearestObject(findNearestFrog());
+    }
+    public String findDirectionOfNearestFly(){
+        return "Mouche la plus proche : " + findDirectionOfNearestObject(findNearestFly());
+    }
     public void render(){
         if (type.equals("fox")){button = new GameButton(this, "fox", 60, 60);}
         else{button = new GameButton(this, type);} //For a fly, a frog or another potential animal

@@ -14,25 +14,19 @@ import java.util.concurrent.ThreadLocalRandom;
 public class PondApplication extends javafx.application.Application {
 
     public JFrame frame = new GameFrame(this, "Pond");
-    public GamePanel panel;
+    public GamePanel panel = new GamePanel(this);
     public Fox fox;
     public ArrayList<Animal> listFrogs = new ArrayList<>();
     public ArrayList<Animal> listFlies = new ArrayList<>();
     public ArrayList<Animal> listDeads = new ArrayList<>(); //Useful to keep dead animal to mind then forget them and make their corpse disappear
     private int i; //Number of flies created
     private int j; //Number of frogs created
-    public Dimension screenSize;
+    public Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();;
     public int day = 1;
 
     @Override
     public void start(Stage stage){
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        Image image = null;
-        final URL imageURL = PondApplication.class.getResource("/com/example/demo2/pond.jpg");
-        if (imageURL != null) {
-            image = ((new ImageIcon(imageURL)).getImage()).getScaledInstance((int) screenSize.getWidth(), (int) screenSize.getHeight(), java.awt.Image.SCALE_SMOOTH);
-        }
-        panel = new GamePanel((GameFrame) frame, image);
+        panel = new GamePanel(this);
         panel.setLayout(null);
         JButton button = new JButton("Next day");
         button.setBounds(10, 10, 150, 30);
