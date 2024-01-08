@@ -1,4 +1,8 @@
-package com.example.demo2;
+package com.example.demo2.tests;
+import com.example.demo2.Fly;
+import com.example.demo2.Fox;
+import com.example.demo2.GameButton;
+import com.example.demo2.PondApplication;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,13 +22,13 @@ public class FlyTest {
         PondApplication pond = new PondApplication();
         Fly fly = new Fly(pond, "TestFly", 50, 50);
         fly.button = new GameButton(fly, fly.type);
-        int initialX = fly.getX();
-        int initialY = fly.getY();
+        int initialX = fly.x;
+        int initialY = fly.y;
 
         fly.move("random");
-        assertNotEquals(initialX, fly.getX());
-        assertNotEquals(initialY, fly.getY());
-        assertTrue(fly.getMass() < 5);
+        assertNotEquals(initialX, fly.x);
+        assertNotEquals(initialY, fly.y);
+        assertTrue(fly.mass < 5);
     }
 
     @Test
@@ -32,15 +36,15 @@ public class FlyTest {
         PondApplication pond = new PondApplication();
         Fly fly = new Fly(pond, "TestFly", 300, 300);
 
-        int initialX = fly.getX();
-        int initialY = fly.getY();
+        int initialX = fly.x;
+        int initialY = fly.y;
 
         fly.move("flee");
 
-        assertNotEquals(initialX, fly.getX());
-        assertNotEquals(initialY, fly.getY());
+        assertNotEquals(initialX, fly.x);
+        assertNotEquals(initialY, fly.y);
 
-        assertTrue(fly.getMass() < 5);
+        assertTrue(fly.mass < 5);
     }
 
     @Test

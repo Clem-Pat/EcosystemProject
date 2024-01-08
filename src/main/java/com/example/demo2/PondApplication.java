@@ -5,7 +5,6 @@ import javafx.stage.Stage;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.Toolkit;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,6 +18,7 @@ public class PondApplication extends javafx.application.Application {
     public Fox fox;
     public ArrayList<Animal> listFrogs = new ArrayList<>();
     public ArrayList<Animal> listFlies = new ArrayList<>();
+    public ArrayList<Animal> listDeads = new ArrayList<>(); //Useful to keep dead animal to mind then forget them and make their corpse disappear
     private int i; //Number of flies created
     private int j; //Number of frogs created
     public Dimension screenSize;
@@ -90,7 +90,7 @@ public class PondApplication extends javafx.application.Application {
         System.out.println(fox.findDirectionOfNearestFly());
     }
 
-    void goToNextDay(){
+    public void goToNextDay(){
         day += 1;
         if (listFlies.size() < 4){                   //We spawn a fly if they are not enough in the game
             i++;
@@ -117,6 +117,9 @@ public class PondApplication extends javafx.application.Application {
             ((Fly) fly).move("random");        //Every fly flies randomly...
             ((Fly) fly).sting(fox);                  //... and try to sting the fox
             fly.aging();
+        }
+        for (Animal animal : listDeads){             //We make dead animals aging, so we can make their corpse disappear after 10 days
+            animal.aging();
         }
         System.out.println("\nJour "+day);
         System.out.println(fox.findDirectionOfNearestFrog());

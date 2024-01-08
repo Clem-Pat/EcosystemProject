@@ -1,10 +1,11 @@
-package com.example.demo2;
+package com.example.demo2.tests;
 
-import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import com.example.demo2.GameFrame;
+import com.example.demo2.GamePanel;
+import com.example.demo2.PondApplication;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -24,7 +25,7 @@ class GamePanelTest {
     }
 
     @Test
-    void containsButtonShouldReturnTrueAfterAddingButton() {
+    public void containsButtonShouldReturnTrueAfterAddingButton() {
         GameButton testButton = new GameButton(new Animal(), "testButton");
         panel.add(testButton);
         panel.revalidate();

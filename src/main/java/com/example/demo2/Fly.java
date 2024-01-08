@@ -16,17 +16,6 @@ public class Fly extends Animal{
         this.radius = 70;
         this.attackRadius = this.radius;
     }
-    public int getX() {
-        return this.x;
-    }
-
-    public int getY() {
-        return this.y;
-    }
-
-    public double getMass() {
-        return this.mass;
-    }
     public void move(String order){
         this.mass = this.mass - 0.05;
         int directionX = 0;

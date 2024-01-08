@@ -64,6 +64,10 @@ public class GameButton extends JButton {
         setBounds(x, y, width, height);
         attackCircle.moveButton(x, y);
     }
+    public void hideButton(){
+        this.setVisible(false);
+        this.attackCircle.setVisible(false);
+    }
     class AttackCircle extends JButton{
         public int x;
         public int y;

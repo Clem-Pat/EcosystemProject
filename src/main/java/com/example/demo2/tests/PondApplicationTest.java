@@ -1,12 +1,10 @@
-package com.example.demo2;
+package com.example.demo2.tests;
 
 
+import com.example.demo2.PondApplication;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
-import java.util.ArrayList;
-import java.awt.*;
 
 public class PondApplicationTest {
 

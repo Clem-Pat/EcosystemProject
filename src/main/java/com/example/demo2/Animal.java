@@ -14,6 +14,7 @@ public class Animal {
     public int attackRadius = 0;
     public double speed = 0;
     public boolean canKill = false;
+    public double dateOfDeath = Double.POSITIVE_INFINITY;
     public GameButton button;
     public PondApplication pond;
 
@@ -22,28 +23,34 @@ public class Animal {
     public boolean isDead(){return this.mass <= 0;}
     public void kill() {
         this.mass = 0;
+        this.dateOfDeath = pond.day;
         button.changeImage("dead"+type.substring(0,1).toUpperCase()+type.substring(1));
         if (type.equals("frog")){pond.listFrogs.remove(this);}
         else if (type.equals("fly")){pond.listFlies.remove(this);}
+        pond.listDeads.add(this);
     }
     public void aging(){
         this.age += 1;
-        if (this.age < 24){
-            this.speed += 1;
+        if (this.speed < 3){
+            this.speed += 0.1;
+        }
+        if (this.age < 24){                     //The tongueSpeed of frogs grow each day
             if (this.type.equals("frog")){
                 Frog frog = (Frog) this;
-                frog.tongueSpeed += 1;
+                frog.tongueSpeed += 0.1;
             }
         }
         else{
-            this.speed -= 1;
-            if (this.type.equals("frog")){
+            if (this.type.equals("frog")){      //If the frog is too old, its tongueSpeed decreases
                 Frog frog = (Frog) this;
-                frog.tongueSpeed -= 1;
+                frog.tongueSpeed -= 0.1;
             }
         }
-        if (this.age > 5){
+        if (this.age > 3){
             this.canKill = true;
+        }
+        if (pond.day - this.dateOfDeath > 10){ //make the corpse disappear 10 days after death
+            this.button.hideButton();
         }
     }
     public Animal findNearestObject(ArrayList<Animal> listObject){
@@ -64,6 +71,6 @@ public class Animal {
     }
     public String toString(){
         if (this.isDead()) {return String.format("I'm a %s named %s. I'm DEAD", type, name);}
-        else {return String.format("I'm a %s named %s. Mass : %.2f.", type, name, mass);}
+        else {return String.format("I'm a %s named %s. Mass : %.2f. Age : %o.", type, name, mass, age);}
     }
 }
