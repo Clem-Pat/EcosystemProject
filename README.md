@@ -23,6 +23,10 @@ To deploy this project run
 ![App Screenshot](./src/main/resources/com/example/demo2/PondScreenShot.png)
 
 
+## Diagram of classes 
+
+![Diagram of classes](./src/main/resources/com/example/demo2/diagram.png)
+
 ## Authors
 
 - [@teatoscan](https://www.github.com/teatoscan)
