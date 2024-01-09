@@ -15,6 +15,7 @@ public class Fox extends Animal{
     }
     public void move(String direction){
         this.mass = this.mass - 0.2; //It starves as it moves
+        if (this.mass <= 0){this.kill();}
         int dx =0; int dy = 0;
         int nP = 20;
         if (direction.equals("Left")) {dx = -1;}

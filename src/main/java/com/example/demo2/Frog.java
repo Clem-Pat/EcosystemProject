@@ -20,6 +20,7 @@ public class Frog extends Animal{
     }
     public void move() {
         this.mass = this.mass - 0.1;  // if it can't eat, it starves
+        if (this.mass <= 0){this.kill();}
         if (!(pond.listFlies.isEmpty())){
             Fly nearestFly = findNearestFly();
             goTo(nearestFly.x, nearestFly.y);

@@ -31,13 +31,14 @@ public class Animal {
     }
     public void aging(){
         this.age += 1;
+        if (this.age > 3){this.canKill = true;}
         if (this.age < 24){
-            if (this.speed < 3){
+            if (this.speed < 2){
                 this.speed += 0.1;          //The speed of young animals increases
             }
             if (this.type.equals("frog")){  //The tongueSpeed of frogs grow each day
                 Frog frog = (Frog) this;
-                frog.tongueSpeed += 0.1;
+                frog.tongueSpeed += 0.2;
             }
         }
         else{
@@ -48,12 +49,7 @@ public class Animal {
                 Frog frog = (Frog) this;
                 frog.tongueSpeed -= 0.1;
             }
-        }
-        if (this.age > 3){
-            this.canKill = true;
-        }
-        if (pond.day - this.dateOfDeath > 10){ //make the corpse disappear 10 days after death
-            this.button.hideButton();
+            if (!this.type.equals("fox") && this.age > 50){this.kill();}
         }
     }
     public Animal findNearestObject(ArrayList<Animal> listObject){

@@ -5,7 +5,6 @@ import javafx.stage.Stage;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.Toolkit;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
@@ -21,7 +20,7 @@ public class PondApplication extends javafx.application.Application {
     public ArrayList<Animal> listDeads = new ArrayList<>(); //Useful to keep dead animal to mind then forget them and make their corpse disappear
     private int i; //Number of flies created
     private int j; //Number of frogs created
-    public Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();;
+    public Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
     public int day = 1;
 
     @Override
@@ -105,16 +104,24 @@ public class PondApplication extends javafx.application.Application {
                 frog.aging();
             }
         }
-        catch(Exception e) {                         //If the fox eats a frog this raises an error due to the for loop, but it does not matter
+        catch(Exception ignored) {}                  //If the fox eats a frog or if the frog ages to death : this raises an error due to the for loop, but it does not matter
+        try{
+            for (Animal fly : listFlies){
+                ((Fly) fly).move("random");    //Every fly flies randomly...
+                ((Fly) fly).sting(fox);              //... and try to sting the fox
+                fly.aging();                         //Making flies aging can kill them so erase them from the list we are currently looking at. This raises an error
+            }
         }
-        for (Animal fly : listFlies){
-            ((Fly) fly).move("random");        //Every fly flies randomly...
-            ((Fly) fly).sting(fox);                  //... and try to sting the fox
-            fly.aging();
+        catch (Exception ignored){}
+        try{
+            for (Animal animal : listDeads){             // we make their corpse disappear 10 days after their death
+                if (day - animal.dateOfDeath > 10){
+                        animal.button.hideButton();
+                        this.listDeads.remove(animal);   //removing an animal from the list we are looking at can raise an error
+                }
+            }
         }
-        for (Animal animal : listDeads){             //We make dead animals aging, so we can make their corpse disappear after 10 days
-            animal.aging();
-        }
+        catch (Exception ignored){}
         System.out.println("\nJour "+day);
         System.out.println(fox.findDirectionOfNearestFrog());
         System.out.println(fox.findDirectionOfNearestFly());

@@ -57,7 +57,7 @@ public class FrogTest {
         Frog frog = new Frog(pond, "Froggy", 100, 100);
         frog.button = new GameButton(frog, "frog");
         frog.aging();
-        assertEquals(1.6, frog.tongueSpeed, 0.1);
+        assertEquals(1.7, frog.tongueSpeed, 0.1);
         assertEquals(2.1, frog.speed, 0.1);
     }
     @Test

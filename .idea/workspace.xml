@@ -4,31 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fad92a7e-750f-4204-a52f-c4bc9078c177" name="Changes" comment="Tea push : equilibre du jeu">
+    <list default="true" id="fad92a7e-750f-4204-a52f-c4bc9078c177" name="Changes" comment="Tea and Clément push : tests making sure the game works + game stabilized">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/Fly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/Fly.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/Fox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/Fox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/Frog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/Frog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/GameButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/GameButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/AnimalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/AnimalTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/FlyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/FlyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/FoxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/FoxTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/PondApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/PondApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/FrogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/FrogTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/GameButtonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/GameButtonTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/GameFrameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/GameFrameTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/PondApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/tests/PondApplicationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/Animal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/AnimalTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/Fly.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/Fly.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/Fox.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/Fox.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/Frog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/Frog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/GameButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/GameButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/FlyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/FlyTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/FoxTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/FoxTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/PondApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/PondApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/FrogTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/FrogTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/GameButtonTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/GameButtonTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/GameFrameTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/GameFrameTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/PondApplicationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/tests/PondApplicationTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +53,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.FrogTest.testAging">
+  <component name="RunManager">
     <configuration name="FoxTest.findDirectionOfNearestFly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo2" />
       <extension name="coverage">
@@ -210,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704711337151</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Tea and Clément push : tests making sure the game works + game stabilized">
+      <option name="closed" value="true" />
+      <created>1704756877459</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1704756877459</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +216,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Corpse disappear 15 days after death" />
     <MESSAGE value="Tea push : equilibre du jeu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tea push : equilibre du jeu" />
+    <MESSAGE value="Tea and Clément push : tests making sure the game works + game stabilized" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tea and Clément push : tests making sure the game works + game stabilized" />
   </component>
 </project>

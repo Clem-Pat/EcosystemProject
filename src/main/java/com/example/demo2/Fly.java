@@ -18,6 +18,7 @@ public class Fly extends Animal{
     }
     public void move(String order){
         this.mass = this.mass - 0.3;
+        if (this.mass <= 0){this.kill();}
         int directionX = 0;
         int directionY = 0;
         int nP = 0;
