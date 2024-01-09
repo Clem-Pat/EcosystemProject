@@ -1,7 +1,17 @@
 package com.example.demo2;
-
+/**
+ * La classe Fox représente un renard dans le contexte de notre jeu.
+ * Elle hérite de la classe Animal et possède des caractéristiques spécifiques à notre renard.
+ */
 public class Fox extends Animal{
-
+    /**
+     * Constructeur de la classe Fox.
+     *
+     * @param pond L'application de l'écosystème auquel le renard appartient.
+     * @param name Le nom du renard.
+     * @param x    La position horizontale initiale du renard.
+     * @param y    La position verticale initiale du renard.
+     */
     public Fox(PondApplication pond, String name, int x, int y) {
         this.type = "fox";
         this.pond = pond;
@@ -13,6 +23,11 @@ public class Fox extends Animal{
         this.attackRadius = this.radius;
         this.speed = 1;
     }
+    /**
+     * Déplace le renard dans une direction donnée en fonction des choix du joueur.
+     *
+     * @param direction La direction du déplacement ("Left", "Right", "Up", "Down").
+     */
     public void move(String direction){
         this.mass = this.mass - 0.2; //It starves as it moves
         if (this.mass <= 0){this.kill();}
@@ -26,6 +41,12 @@ public class Fox extends Animal{
         this.y = (int) (this.y + dy*nP*this.speed);
         this.button.moveButton(this.x, this.y);
     }
+    /**
+     * Tente de manger une grenouille.
+     *
+     * @param frog La grenouille cible du renard.
+     * @return Un message indiquant le résultat de la tentative du renard.
+     */
     public String eat(Frog frog){
         if (this.canKill){
             if (Math.sqrt(Math.pow((this.x+0.5*this.radius) - (frog.x+0.5*frog.radius), 2) + Math.pow((this.y+0.5*this.radius) - (frog.y+0.5*frog.radius), 2)) <=  this.radius + 0.5*(this.attackRadius-this.radius)){

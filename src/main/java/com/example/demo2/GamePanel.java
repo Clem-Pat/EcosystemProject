@@ -7,9 +7,21 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.net.URL;
 import javax.swing.*;
+/**
+ * La classe GamePanel représente le panneau principal de notre jeu.
+ * Elle étend JPanel pour fournir une zone graphique dans laquelle nos composants peuvent être ajoutés.
+ */
 
 public class GamePanel extends JPanel {
+    /**
+     * Notre image de fond.
+     */
     public final Image image;
+    /**
+     * Constructeur de la classe GamePanel.
+     *
+     * @param pond L'application principale de l'écosystème.
+     */
 
     // Constructor
     public GamePanel(PondApplication pond) {
@@ -31,6 +43,11 @@ public class GamePanel extends JPanel {
             }
         });
     }
+    /**
+     * Redéfinition de la méthode paintComponent pour dessiner le contenu du panneau.
+     *
+     * @param g L'objet Graphics utilisé pour dessiner.
+     */
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -44,6 +61,12 @@ public class GamePanel extends JPanel {
             g.drawOval(0, 0,  this.getParent().getWidth()/2, this.getParent().getHeight()/2);
         }
     }
+    /**
+     * Vérifie si le panneau contient un bouton spécifié.
+     *
+     * @param button Le bouton à vérifier.
+     * @return true si le panneau contient le bouton, sinon false.
+     */
     public boolean contains(GameButton button) {
         Component[] components = getComponents();
         for (Component component : components) {

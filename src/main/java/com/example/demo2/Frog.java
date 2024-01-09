@@ -1,10 +1,23 @@
 package com.example.demo2;
 
 import java.util.concurrent.ThreadLocalRandom;
-
+/**
+ * La classe Frog représente une grenouille dans le contexte de notre jeu.
+ * Elle hérite de la classe Animal et possède des caractéristiques spécifiques aux grenouilles.
+ */
 public class Frog extends Animal{
+    /**
+     * La vitesse de la langue de la grenouille, qui va dépendre de son âge
+     */
     public double tongueSpeed;
-
+    /**
+     * Constructeur de la classe Frog.
+     *
+     * @param pond L'application de l'écosystème auquel la grenouille appartient.
+     * @param name Le nom de la grenouille.
+     * @param x    La position horizontale initiale de la grenouille.
+     * @param y    La position verticale initiale de la grenouille.
+     */
     //Constructor
     public Frog(PondApplication pond, String name, int x, int y) {
         this.type = "frog";
@@ -18,6 +31,11 @@ public class Frog extends Animal{
         this.attackRadius = this.radius + 40;
         this.speed = 2;
     }
+    /**
+     * Fait bouger la grenouille vers une position donnée.
+     * Si une mouche (listFlies) est à proximité, la grenouille tente de la manger.
+     * Si aucune mouche n'est présente, la grenouille se déplace aléatoirement.
+     */
     public void move() {
         this.mass = this.mass - 0.1;  // if it can't eat, it starves
         if (this.mass <= 0){this.kill();}
@@ -34,6 +52,12 @@ public class Frog extends Animal{
             goTo(x, y);
         }
     }
+    /**
+     * Déplace la grenouille vers une position spécifiée.
+     *
+     * @param x2 La position horizontale vers laquelle la grenouille se déplace.
+     * @param y2 La position verticale vers laquelle la grenouille se déplace.
+     */
     public void goTo(int x2, int y2){
         if (this.isDead()){this.kill();}
         int nP = 10;                                                    //Number of pixels to go through each jump
@@ -48,6 +72,12 @@ public class Frog extends Animal{
         if ((futureY > 100) && (futureY < (int) pond.screenSize.getHeight() - 200)) {this.y = futureY;}
         button.moveButton(this.x, this.y); //Move the related button
     }
+    /**
+     * Tente de manger une mouche.
+     *
+     * @param fly La mouche cible de la tentative de la grenouille.
+     * @return Un message indiquant le résultat de la tentative de la grenouille.
+     */
     public String eat(Fly fly){
         if (this.canKill){
             if (Math.sqrt(Math.pow((this.x+0.5*this.radius) - (fly.x+0.5*fly.radius), 2) + Math.pow((this.y+0.5*this.radius) - (fly.y+0.5*fly.radius), 2)) <= this.radius + 0.5*(this.attackRadius-this.radius)){

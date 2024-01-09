@@ -1,9 +1,20 @@
 package com.example.demo2;
 
 import java.util.concurrent.ThreadLocalRandom;
-
+/**
+ * La classe Fly représente une mouche dans notre écosystème.
+ * Elle hérite de la classe Animal et possède des caractéristiques spécifiques aux mouches.
+ */
 public class Fly extends Animal{
 
+    /**
+     * Constructeur de la classe Fly.
+     *
+     * @param pond L'application de l'écosystème auquel la mouche appartient.
+     * @param name Le nom de la mouche.
+     * @param x    La position horizontale initiale de la mouche.
+     * @param y    La position verticale initiale de la mouche.
+     */
     //Constructor
     public Fly(PondApplication pond, String name, int x, int y) {
         this.type = "fly";
@@ -16,6 +27,12 @@ public class Fly extends Animal{
         this.radius = 70;
         this.attackRadius = this.radius;
     }
+
+    /**
+     * Déplace la mouche en fonction de l'ordre donné.
+     *
+     * @param order L'ordre de déplacement ("random" quand pas de menace, ou "flee" quand attaquée).
+     */
     public void move(String order){
         this.mass = this.mass - 0.3;
         if (this.mass <= 0){this.kill();}
@@ -42,6 +59,11 @@ public class Fly extends Animal{
         }
         button.moveButton(this.x, this.y);
     }
+    /**
+     * Tente de piquer un renard.
+     *
+     * @param fox Le renard cible de la piqûre.
+     */
     public void sting(Fox fox) {
         if (this.canKill){
             if (!fox.isDead()){
