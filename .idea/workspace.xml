@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="Module 'demo2'" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fad92a7e-750f-4204-a52f-c4bc9078c177" name="Changes" comment="Javadoc Animal">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_01_2024_22_13__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_01_2024_22_13__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_01_2024_22_13__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_01_2024_22_13__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_01_2024_10_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_01_2024_10_09__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_01_2024_11_23__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_01_2024_11_23__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/Fly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/Fly.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/Fox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/Fox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/Frog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/Frog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/GameButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/GameButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/GameFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo2/PondApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo2/PondApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo2/PondApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo2/PondApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ecosystemproject/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/javadoc/Animal.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/Animal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/javadoc/Fly.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/Fly.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/javadoc/Fox.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/Fox.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/javadoc/Frog.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/Frog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/javadoc/GameButton.AttackCircle.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/GameButton.AttackCircle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/javadoc/GameButton.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/GameButton.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/javadoc/GameFrame.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/GameFrame.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/javadoc/GamePanel.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/GamePanel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/javadoc/PondApplication.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/PondApplication.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/javadoc/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/javadoc/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/com.example.demo2/com/example/demo2/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,19 +54,25 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Clément Patrizio/Desktop/EcosystemProject",
+    "last_opened_file_path": "C:/projet_ecosystem/EcosystemProject",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projet_ecosystem\EcosystemProject" />
+      <recent name="C:\projet_ecosystem\EcosystemProject\Javadoc\com.example.demo2\com\example\demo2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.PondApplication">
     <configuration name="PondApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.demo2.PondApplication" />
       <module name="demo2" />
@@ -138,13 +156,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="EcosystemProject" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AnimalTest.isDeadWhenMassIsNegative" />
@@ -163,6 +174,7 @@
       <option name="presentableId" value="Default" />
       <updated>1704702551499</updated>
       <workItem from="1704702553209" duration="2332000" />
+      <workItem from="1704812963996" duration="3417000" />
     </task>
     <task id="LOCAL-00001" summary="Corpse disappear 15 days after death">
       <option name="closed" value="true" />
