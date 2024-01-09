@@ -10,15 +10,13 @@ import javax.swing.*;
 
 public class GamePanel extends JPanel {
     public final Image image;
-    public Graphics g;
-    public Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();;
-
 
     // Constructor
     public GamePanel(PondApplication pond) {
         Image image = null;
         final URL imageURL = PondApplication.class.getResource("/com/example/demo2/pond.jpg");
         if (imageURL != null) {
+            Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
             image = ((new ImageIcon(imageURL)).getImage()).getScaledInstance((int) screenSize.getWidth(), (int) screenSize.getHeight(), java.awt.Image.SCALE_SMOOTH);
         }
         GameFrame frame = (GameFrame) pond.frame;
@@ -36,7 +34,6 @@ public class GamePanel extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        this.g = g;
         if (this.image != null){
             this.image.getScaledInstance(this.getParent().getWidth(), this.getParent().getHeight(), java.awt.Image.SCALE_SMOOTH);
             int x = this.getParent().getWidth()/2 - this.image.getWidth(this)/2;

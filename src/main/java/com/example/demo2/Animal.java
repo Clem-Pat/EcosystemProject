@@ -6,13 +6,13 @@ import java.util.Collections;
 public class Animal {
     public String type = "none";
     public String name = "none";
-    public double mass = 0;
     public int age = 0;
+    public double mass = 0;
+    public double speed = 0;
     public int x = 0;
     public int y = 0;
     public int radius = 0;
     public int attackRadius = 0;
-    public double speed = 0;
     public boolean canKill = false;
     public double dateOfDeath = Double.POSITIVE_INFINITY;
     public GameButton button;

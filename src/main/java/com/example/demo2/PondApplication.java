@@ -25,7 +25,6 @@ public class PondApplication extends javafx.application.Application {
 
     @Override
     public void start(Stage stage){
-        panel = new GamePanel(this);
         panel.setLayout(null);
         JButton button = new JButton("Next day");
         button.setBounds(10, 10, 150, 30);
@@ -47,7 +46,7 @@ public class PondApplication extends javafx.application.Application {
         listFlies.add(fly);
     }
     public void addFrog(){
-        ArrayList<String> listNamesFrogs = new ArrayList<>(Arrays.asList("Noé", "Thibaut", "Benjamin", "Baptiste", "Tea", "Alice", "Antoine"));
+        ArrayList<String> listNamesFrogs = new ArrayList<>(Arrays.asList("Noé", "Thibaut", "Benjamin", "Baptiste", "Tea", "Alice", "Antoine", "Clément"));
         int j1 = j%listNamesFrogs.size();
         int x = ThreadLocalRandom.current().nextInt(100, (int) screenSize.getWidth() - 200);
         int y = ThreadLocalRandom.current().nextInt(100, (int) screenSize.getHeight() - 200);
