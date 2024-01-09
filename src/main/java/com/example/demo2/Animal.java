@@ -3,6 +3,10 @@ package com.example.demo2;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * La classe Animal représente notre entité de base de notre jeu d'écosystème.
+ * Les animaux peuvent être de différents types tels que grenouille, mouche, renard, etc.
+ */
 public class Animal {
     public String type = "none";
     public String name = "none";
@@ -18,9 +22,22 @@ public class Animal {
     public GameButton button;
     public PondApplication pond;
 
+    /**
+     * Constructeur par défaut de la classe Animal.
+     */
     public Animal(){
     }
+
+    /**
+     * Vérifie si l'animal est mort en fonction de sa masse.
+     *
+     * @return true si l'animal est mort, false sinon.
+     */
     public boolean isDead(){return this.mass <= 0;}
+
+    /**
+     * Tue l'animal, met à jour sa masse, change son image, et le retire de la liste s'il est mort.
+     */
     public void kill() {
         this.mass = 0;
         this.dateOfDeath = pond.day;
@@ -29,6 +46,11 @@ public class Animal {
         else if (type.equals("fly")){pond.listFlies.remove(this);}
         pond.listDeads.add(this);
     }
+
+    /**
+     * Gère le processus de vieillissement de l'animal.
+     * Ajuste la vitesse, la vitesse de la langue pour les grenouilles, et tue l'animal s'il est trop vieux.
+     */
     public void aging(){
         this.age += 1;
         if (this.age > 3){this.canKill = true;}
@@ -52,6 +74,12 @@ public class Animal {
             if (!this.type.equals("fox") && this.age > 50){this.kill();}
         }
     }
+    /**
+     * Trouve l'objet le plus proche parmi une liste d'objets donnée.
+     *
+     * @param listObject Liste d'objets (nos animaux) parmi lesquels on cherche le plus proche.
+     * @return L'objet le plus proche ou null si la liste est vide.
+     */
     public Animal findNearestObject(ArrayList<Animal> listObject){
         if (listObject.isEmpty()){ return null ;}
         else{
@@ -79,10 +107,18 @@ public class Animal {
     public String findDirectionOfNearestFly(){
         return "Mouche la plus proche : " + findDirectionOfNearestObject(findNearestFly());
     }
+    /**
+     * Crée un bouton graphique associé à l'animal dans l'interface utilisateur.
+     */
     public void render(){
         if (type.equals("fox")){button = new GameButton(this, "fox", 60, 60);}
         else{button = new GameButton(this, type);} //For a fly, a frog or another potential animal
     }
+    /**
+     * Fournit une représentation sous forme de chaîne de l'animal.
+     *
+     * @return Une chaîne de caractère représentant l'état (nom, masse, âge, vivant ou mort) actuel de l'animal.
+     */
     public String toString(){
         if (this.isDead()) {return String.format("I'm a %s named %s. I'm DEAD", type, name);}
         else {return String.format("I'm a %s named %s. Mass : %.2f. Age : %o.", type, name, mass, age);}
