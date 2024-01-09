@@ -27,6 +27,10 @@ To deploy this project run
 
 ![Diagram of classes](./src/main/resources/com/example/demo2/diagram.png)
 
+## Javadoc 
+
+https://clem-pat.github.io/EcosystemProject
+
 ## Authors
 
 - [@teatoscan](https://www.github.com/teatoscan)
